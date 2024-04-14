@@ -50,17 +50,23 @@ file_path8 = "./combined_breeds_subset_8.dnd"
 file_path9 = "./combined_breeds_subset_9.dnd"
 file_path10 = "./combined_breeds_subset_10.dnd"
 file_path11 = "./combined_breeds_subset_11.dnd"
-draw_phylogenetic_tree(file_path1)
-draw_phylogenetic_tree(file_path2)
-draw_phylogenetic_tree(file_path3)
-draw_phylogenetic_tree(file_path4)
-draw_phylogenetic_tree(file_path5)
-draw_phylogenetic_tree(file_path6)
-draw_phylogenetic_tree(file_path7)
-draw_phylogenetic_tree(file_path8)
-draw_phylogenetic_tree(file_path9)
-draw_phylogenetic_tree(file_path10)
-draw_phylogenetic_tree(file_path11)
+Dog_dna_modules.draw_phylogenetic_tree(file_path1)
+Dog_dna_modules.draw_phylogenetic_tree(file_path2)
+Dog_dna_modules.draw_phylogenetic_tree(file_path3)
+Dog_dna_modules.draw_phylogenetic_tree(file_path4)
+Dog_dna_modules.draw_phylogenetic_tree(file_path5)
+Dog_dna_modules.draw_phylogenetic_tree(file_path6)
+Dog_dna_modules.draw_phylogenetic_tree(file_path7)
+Dog_dna_modules.draw_phylogenetic_tree(file_path8)
+Dog_dna_modules.draw_phylogenetic_tree(file_path9)
+Dog_dna_modules.draw_phylogenetic_tree(file_path10)
+Dog_dna_modules.draw_phylogenetic_tree(file_path11)
+
+# Manually create closest_in_phyl_tree.fa FASTA file adding your mystery sequence and the sequences chosen after visual analysis of
+# the phylogenetic trees and selection of breeds closest to your mystery sequence (paying attention to the branch lengths)
+
+# Pausing execution and instructing the user
+input("Please create closest_in_phyl_tree.fa FASTA file and press Enter to continue...")
 
 # Performing multiple sequence alignment on a FASTA file with all sequences closest to mystery sequence in phylogenetic trees
 closest_in_phyl_tree_path = "./closest_in_phyl_tree.fa"
@@ -68,4 +74,4 @@ stdout, stderr = Dog_dna_modules.run_clustalw(closest_in_phyl_tree_path)
 
 # Drawing a phylogenetic tree for the .dnd file produced after running multiple sequence alignments on closest_in_phyl_tree.fa file
 closest_matches_tree_path = "./closest_in_phyl_tree.dnd"
-draw_phylogenetic_tree(closest_matches_tree_path)
+Dog_dna_modules.draw_phylogenetic_tree(closest_matches_tree_path)
