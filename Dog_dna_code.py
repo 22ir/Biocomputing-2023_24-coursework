@@ -63,7 +63,8 @@ Dog_dna_modules.draw_phylogenetic_tree(file_path10)
 Dog_dna_modules.draw_phylogenetic_tree(file_path11)
 
 # Manually create closest_in_phyl_tree.fa FASTA file adding your mystery sequence and the sequences chosen after visual analysis of
-# the phylogenetic trees and selection of breeds closest to your mystery sequence (paying attention to the branch lengths)
+# the phylogenetic trees and selection of breeds closest to your mystery sequence paying attention to the branch lengths 
+# (This can be done by opening FASTA files on VScode)
 
 # Pausing execution and instructing the user
 input("Please create closest_in_phyl_tree.fa FASTA file and press Enter to continue...")
