@@ -38,7 +38,7 @@ input_file_path11 = "./combined_breeds_subset_11.fa"
 stdout, stderr = Dog_dna_modules.run_clustalw(input_file_path11)
 
 
-# Drawing a phylogenetic trees for each .dnd file produced after running multiple sequence alignments on 11 sets of .fa files
+# Drawing phylogenetic trees for each .dnd file produced after running multiple sequence alignments on 11 sets of .fa files
 file_path1 = "./combined_breeds_subset_1.dnd"
 file_path2 = "./combined_breeds_subset_2.dnd"
 file_path3 = "./combined_breeds_subset_3.dnd"
@@ -62,3 +62,10 @@ draw_phylogenetic_tree(file_path9)
 draw_phylogenetic_tree(file_path10)
 draw_phylogenetic_tree(file_path11)
 
+# Performing multiple sequence alignment on a FASTA file with all sequences closest to mystery sequence in phylogenetic trees
+closest_in_phyl_tree_path = "./closest_in_phyl_tree.fa"
+stdout, stderr = Dog_dna_modules.run_clustalw(closest_in_phyl_tree_path)
+
+# Drawing a phylogenetic tree for the .dnd file produced after running multiple sequence alignments on closest_in_phyl_tree.fa file
+closest_matches_tree_path = "./closest_in_phyl_tree.dnd"
+draw_phylogenetic_tree(closest_matches_tree_path)
