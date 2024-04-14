@@ -1,8 +1,7 @@
 import Dog_dna_modules 
 
 # Create smaller .fa files containing 10 sequences (myster.fa seq + 9 other dog breed sequences)
-
-Dog_dna_modules.mystery_and_9breeds("mystery.fa", "dog_breeds.fa", "dog_breeds_subset", 9)
+Dog_dna_modules.add_mystery_to_split_breeds("mystery.fa", "dog_breeds.fa", "dog_breeds_subset", 9)
 
 # performing multiple sequence alignments
 input_file_path1 = "./combined_breeds_subset_1.fa"
